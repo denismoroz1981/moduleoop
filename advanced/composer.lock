@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "630d5f1d19e73b0163f900453171fba5",
+    "content-hash": "ca9aa31cd848f8d2589f4037d16121c6",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -74,7 +74,7 @@
             "version": "v1.3.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bestiejs/punycode.js.git",
+                "url": "git@github.com:bestiejs/punycode.js.git",
                 "reference": "38c8d3131a82567bfef18da09f7f4db68c84f8a3"
             },
             "dist": {
@@ -106,6 +106,50 @@
             "license": [
                 "MIT"
             ]
+        },
+        {
+            "name": "bupy7/yii2-flexslider",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bupy7/yii2-flexslider.git",
+                "reference": "985928ee543b1e9b0856f1ffd646655a10048a5d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bupy7/yii2-flexslider/zipball/985928ee543b1e9b0856f1ffd646655a10048a5d",
+                "reference": "985928ee543b1e9b0856f1ffd646655a10048a5d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "bupy7\\flexslider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Vasilij Belosludcev",
+                    "email": "bupy765@gmail.com",
+                    "homepage": "http://mihaly4.ru"
+                }
+            ],
+            "description": "This is widget wrapper of Flexslider https://github.com/woothemes/FlexSlider for Yii2.",
+            "homepage": "https://github.com/bupy7/yii2-flexslider",
+            "keywords": [
+                "extension",
+                "flexslider",
+                "widget",
+                "yii2"
+            ],
+            "time": "2018-02-09T09:35:34+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -2854,7 +2898,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "bupy7/yii2-flexslider": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

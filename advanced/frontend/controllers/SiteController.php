@@ -12,6 +12,12 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use common\models\News;
+//use common\models\Comments;
+//use common\models\Tags;
+//use common\models\Ads;
+//use common\models\Category;
+
 
 /**
  * Site controller
@@ -72,7 +78,20 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $news = News::find()->all();
+        //$news = News::find()->andWhere(['isanalytical'=>1])->orderBy('sort')->all();
+
+        //$comments = Comments::find()->all();
+        //$ads = Adds::find()->all();
+        //$category=Category::find()->all();
+        //$tags=Tags::find()->all();
+        return $this->render('index',[
+            'news'=>$news,
+            //'comments'=>$comments,
+            //'ads'=>$ads,
+            //'tags'=>$tags,
+            //'category'=>$category
+        ]);
     }
 
     /**

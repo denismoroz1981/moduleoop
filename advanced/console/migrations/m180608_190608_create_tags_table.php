@@ -19,7 +19,7 @@ class m180608_190608_create_tags_table extends Migration
 
         ],'ENGINE=InnoDB','CHARACTER SET=utf8','COLLATE=utf8_general_ci');
 
-        $this->createIndex('idx-news-news_id','tags','news_id');
+        $this->createIndex('idx-tags-news_id','tags','news_id');
         $this->addForeignKey('fk_news_news_id','tags','news_id',
             'news','id','CASCADE');
     }

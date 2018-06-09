@@ -28,6 +28,6 @@ class m180608_190642_create_adds_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('adds');
+        $this->dropTable('ads');
     }
 }

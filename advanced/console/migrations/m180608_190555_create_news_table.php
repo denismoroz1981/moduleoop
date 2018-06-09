@@ -23,9 +23,15 @@ class m180608_190555_create_news_table extends Migration
             'comments_count'=>'integer',
             'created_at'=>$this->dateTime().' DEFAULT NOW()',
             'isanalytical'=>'integer',
-            'category'=>'string'
+            'category_id'=>'integer'
 
         ],'ENGINE=InnoDB','CHARACTER SET=utf8','COLLATE=utf8_general_ci');
+
+
+        $this->createIndex('idx-news-category_id','news','category_id');
+        $this->addForeignKey('fk_news_category_id','news','category_id',
+            'category','id','CASCADE');
+
 
     }
 
@@ -34,6 +40,12 @@ class m180608_190555_create_news_table extends Migration
      */
     public function safeDown()
     {
+       $this->dropForeignKey('fk_news-category_id','news');
+
+        $this->dropIndex(
+            'idx-news-category_id',
+            'news'
+        );
         $this->dropTable('news');
     }
 }
