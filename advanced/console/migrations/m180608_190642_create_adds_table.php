@@ -12,9 +12,15 @@ class m180608_190642_create_adds_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('adds', [
-            'id' => $this->primaryKey(),
-        ]);
+        $this->createTable('ads',[
+            "id"=>'pk',
+            "sort"=>'integer',
+            "item"=>"string",
+            "price"=>$this->float(),
+            "vendor"=>"string"
+
+        ],'ENGINE=InnoDB','CHARACTER SET=utf8','COLLATE=utf8_general_ci');
+
     }
 
     /**
